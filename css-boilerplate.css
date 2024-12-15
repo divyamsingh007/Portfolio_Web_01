@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap");
+
+body {
+  background-color: black;
+  color: whitesmoke;
+  font-family: "Baloo Bhai 2", sans-serif;
+}
+
+#main_nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 2px solid white;
+}
+
+.nav_logo {
+  font-size: 35px;
+  font-weight: 500;
+  letter-spacing: 10px;
+}
+
+.nav_container {
+  display: flex;
+}
+
+.nav_container a {
+  margin: 12.5px 3vw;
+  padding: 5px 25px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+
+#main_body_1 {
+  background-color: rgb(17, 0, 255);
+  display: inline-flex;
+  margin: 20px 0;
+  height: 80vh;
+  width: 99vw;
+  background: url("bg-img-1.jpg") no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main_container {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f96c00;
+}
+
+.box_1,
+.box_2 {
+  padding: 20px;
+  height: 100%;
+  width: 50%;
+}
+
+.box_1 {
+  color: black;
+  background-color: white;
+}
+
+.box_2 {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image_container{
+  background-color: #f96c00;
+  background: url("portfolio-img-2.jpg") ;
+  background-position: top;
+  background-size: cover;
+  filter: grayscale(100%);
+  height: 80%;
+  width: 60%;
+  animation-name: anime_2;
+  animation-duration: 0.5s;
+}
+
+@keyframes anime_1 {
+  from{
+    filter: grayscale(100%);
+    height: 80%;
+    width: 60%;
+  }
+  to{
+    filter: grayscale(0%);
+    height: 85%;
+    width: 65%;
+  }
+}
+@keyframes anime_2 {
+  from{
+    filter: grayscale(0%);
+    height: 85%;
+    width: 65%;
+  }
+  to{
+    filter: grayscale(100%);
+    height: 80%;
+    width: 60%;
+  }
+}
+
+.image_container:hover{
+  cursor: pointer;
+  animation-name: anime_1;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
