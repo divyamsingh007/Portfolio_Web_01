@@ -1,6 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap");
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
+  height: 100vh;
+  width: 100vw;
   background-color: black;
   color: whitesmoke;
   font-family: "Baloo Bhai 2", sans-serif;
@@ -14,21 +21,34 @@ body {
 }
 
 .nav_logo {
-  font-size: 35px;
+  font-size: 50px;
   font-weight: 500;
   letter-spacing: 10px;
+  cursor: pointer;
 }
 
 .nav_container {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav_container a {
+  text-align: center;
   margin: 12.5px 3vw;
   padding: 5px 25px;
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-size: 20px;
+  transition: 0.3s;
+  border-radius: 20px;
+}
+
+.nav_container a:hover {
+  background-color: white;
+  color: black;
+  font-size: 25px;
+  /* opacity: 0.7; */
 }
 
 #main_body_1 {
@@ -51,7 +71,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f96c00;
+  background-color: transparent;
 }
 
 .box_1,
@@ -64,18 +84,22 @@ body {
 .box_1 {
   color: black;
   background-color: white;
+  border-bottom-left-radius: 50px;
 }
 
 .box_2 {
+  border-top-right-radius: 50px;
   background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.image_container{
-  background-color: #f96c00;
-  background: url("portfolio-img-2.jpg") ;
+.image_container {
+  border-top-right-radius: 25px;
+  /* border-bottom-left-radius: 25px; */
+  background-color: transparent;
+  background: url("portfolio-img-2.jpg");
   background-position: top;
   background-size: cover;
   filter: grayscale(100%);
@@ -86,33 +110,136 @@ body {
 }
 
 @keyframes anime_1 {
-  from{
+  from {
     filter: grayscale(100%);
     height: 80%;
     width: 60%;
   }
-  to{
+  to {
     filter: grayscale(0%);
     height: 85%;
     width: 65%;
   }
 }
 @keyframes anime_2 {
-  from{
+  from {
     filter: grayscale(0%);
     height: 85%;
     width: 65%;
   }
-  to{
+  to {
     filter: grayscale(100%);
     height: 80%;
     width: 60%;
   }
 }
 
-.image_container:hover{
+.image_container:hover {
   cursor: pointer;
   animation-name: anime_1;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
+}
+
+.title-container {
+  line-height: 45px;
+  margin: auto;
+  width: fit-content;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title-container h1 {
+  font-weight: lighter;
+  font-size: 90px;
+}
+
+.title-container h2 {
+  color: #543a14;
+  font-weight: lighter;
+  font-size: 32px;
+  letter-spacing: 5px;
+  text-decoration: underline;
+}
+
+.social-container {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+
+.social-container h1 {
+  margin: 20px 0;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: #555;
+  text-align: center;
+}
+
+.social-media a {
+  display: flex;
+  background: #e3edf7;
+  height: 35px;
+  width: 35px;
+  margin: 0 10px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0);
+  transition: transform 0.5s;
+}
+
+.social-media a i {
+  font-size: 20px;
+  color: #777;
+  transition: transform 0.5s;
+}
+
+.social-media a:hover {
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.01);
+  transform: translateY(2px);
+}
+
+.social-media a:hover i {
+  transform: scale(0.9);
+}
+
+.social-media a:hover .fa-facebook {
+  color: #3b5998;
+}
+
+.social-media a:hover .fa-twitter {
+  color: #00acee;
+}
+
+.social-media a:hover .fa-github {
+  color: #000000;
+}
+
+.social-media a:hover .fa-instagram {
+  color: #f14843;
+}
+
+.social-media a:hover .fa-linkedin-in {
+  color: #3b5998;
 }
