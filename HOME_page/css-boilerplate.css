@@ -1,0 +1,11 @@
+#nav-list{
+    display: flex;
+}
+
+#nav-list a{
+    margin: 1rem;
+}
+
+#nav-list a:hover{
+    opacity: 0.7;
+}
