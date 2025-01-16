@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -6,13 +6,15 @@
     <link rel="stylesheet" href="css-boilerplate.css" />
     <title>Portfolio - Home</title>
   </head>
-  <body>
-    <nav class="flex flex-wrap fixed left-0 top-0 h-screen bg-black text-white justify-evenly w-40 px-6 py-6 items-start">
+  <body style="height: 100000px;">
+    <div
+      class="left flex flex-wrap fixed left-0 top-0 h-screen bg-black text-white justify-evenly w-40 px-6 py-6 items-start"
+    >
       <div>
         <img
           src="portfolio-img-2.jpg"
           alt="AVATAR"
-          class="cursor-pointer rounded-full w-24 h-24 object-cover"
+          class="cursor-pointer rounded-full w-24 h-24 object-cover hover:grayscale"
         />
       </div>
       <div class="flex-col" id="nav-list">
@@ -22,8 +24,67 @@
         <a href="">Skills</a>
         <a href="">Intersets & Hobbies</a>
       </div>
-      <div>>>></div>
-    </nav>
-    <div class="text-4xl">HELLO WORLD</div>
+    </div>
+    <div class="right w-full">
+      <div
+        class="relative tracking-wider flex flex-col items-center justify-center text-white ml-40 w-auto bg-slate-400 h-[55rem]"
+        style="
+          background-image: url(bg-img.jpg);
+          background-attachment: fixed;
+          background-size: cover;
+        "
+      >
+        <h3 class="text-7xl"><span class="text-black">H</span>i, I am</h3>
+        <h2 class="text-9xl"><span class="text-black">Divy</span>am Singh</h2>
+        <p class="text-2xl m-8">
+          <span class="text-black">Freelan</span>ce front-end web developer from
+          India
+        </p>
+        <a href="#about-me"
+          ><button
+            class="px-10 py-4 m-10 rounded-full text-xl font-light hover:-translate-y-1 shadow-md"
+            style="background-color: #09122c"
+          >
+            Know more⬇️
+          </button></a
+        >
+      </div>
+      <div
+        class="ml-40 relative -top-32 flex items-center justify-center w-auto"  id="about-me"
+      >
+        <div class="w-5/6 bg-white p-10 drop-shadow-2xl">
+          <h1 class="text-5xl pt-20 tracking-wider">About Me</h1>
+          <span
+            class="absolute w-40 h-1 mt-4"
+            style="background-color: #1e3e62"
+          ></span>
+          <p class="mt-10 text-lg font-light">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae
+            repudiandae veniam, dicta aspernatur reiciendis magni. Quae voluptas
+            doloribus asperiores impedit eligendi, eum ad! Similique error nobis
+            fuga explicabo quae cumque accusantium eveniet, ad blanditiis
+            nesciunt assumenda sint delectus, sequi nostrum? Ab nesciunt magni
+            accusamus maxime asperiores autem placeat ex blanditiis nisi?
+            Nostrum magni necessitatibus amet earum perspiciatis maiores
+            molestiae magnam eum obcaecati, laborum, in dolores pariatur animi
+            quidem deleniti vel excepturi nemo error asperiores! Maiores
+            consectetur provident reprehenderit cum velit autem culpa illo nam
+            animi asperiores eaque incidunt, voluptatem saepe quos voluptate
+            aspernatur quod! Aperiam aut debitis consequatur quam earum? Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Autem repellat
+            delectus excepturi, aperiam reprehenderit saepe dicta eveniet
+            tempora in animi distinctio nulla dolore non velit voluptas. Saepe
+            debitis, minus laborum magnam itaque eaque perferendis nisi
+            reiciendis quis ab rerum dicta optio, dolorem vitae tempora velit
+            odio ad quos ex amet ipsum totam, consequatur adipisci similique!
+            Possimus amet adipisci soluta inventore ullam eveniet esse, facilis
+            odit magni qui corporis architecto consequatur odio at, quod natus,
+            ipsa commodi. Saepe et commodi eaque molestiae iste, deserunt,
+            culpa, consequatur id eos vitae repellendus beatae molestias labore
+            laborum aliquam. At, delectus quas. Ratione, esse sint.
+          </p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
