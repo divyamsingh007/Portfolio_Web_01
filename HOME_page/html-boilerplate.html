@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css-boilerplate.css" />
     <title>Portfolio - Home</title>
   </head>
-  <body style="height: 100000px">
+  <body>
     <div
       class="left flex flex-wrap fixed left-0 top-0 h-screen bg-black text-white justify-evenly w-40 px-6 py-6 items-start"
     >
@@ -23,7 +23,7 @@
         <a href="#education">Education</a>
         <a href="#experiences">Experiences</a>
         <a href="#skills">Skills</a>
-        <a href="">Intersets & Hobbies</a>
+        <a href="#interests">Interests & Hobbies</a>
       </div>
     </div>
     <div class="right w-full">
@@ -219,7 +219,9 @@
                 class="box flex flex-col my-10 rounded-lg drop-shadow-2xl border-4 border-solid px-5 transition transform hover:-translate-y-5 motion-reduce:transition-none motion-reduce:hover:transform-none"
               >
                 <img src="html-logo.svg" alt="" class="w-24 mx-auto my-10" />
-                <h2 class="text-4xl">Hypertext Markup Language</h2>
+                <h2 class="text-4xl font-semibold">
+                  Hypertext Markup Language
+                </h2>
                 <p class="p-10 font-light text-xl">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Optio quia cumque dicta blanditiis, aut suscipit quod? Natus
@@ -230,7 +232,7 @@
                 class="box flex flex-col my-10 rounded-lg drop-shadow-2xl border-4 border-solid px-5 transition transform hover:-translate-y-5 motion-reduce:transition-none motion-reduce:hover:transform-none"
               >
                 <img src="css-logo.svg" alt="" class="w-24 mx-auto my-10" />
-                <h2 class="text-4xl">Cascading Style Sheet</h2>
+                <h2 class="text-4xl font-semibold">Cascading Style Sheet</h2>
                 <p class="p-10 font-light text-xl">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Optio quia cumque dicta blanditiis, aut suscipit quod? Natus
@@ -245,7 +247,7 @@
                   alt=""
                   class="w-24 mx-auto my-10"
                 />
-                <h2 class="text-4xl">JavaScript</h2>
+                <h2 class="text-4xl font-semibold">JavaScript</h2>
                 <p class="p-10 font-light text-xl">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Optio quia cumque dicta blanditiis, aut suscipit quod? Natus
@@ -256,11 +258,106 @@
           </div>
         </div>
       </div>
-      <div class="ml-40">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus,
-        iusto expedita, quia quaerat quos dignissimos fugiat deserunt cum
-        sapiente itaque repellat facere nulla tempora similique. Nam consequatur
-        ipsa saepe voluptate.
+      <div class="ml-40 flex items-center justify-center" id="interests">
+        <div class="w-5/6 p-10 flex flex-col">
+          <h1 class="text-5xl tracking-wider">Interests & Hobbies</h1>
+          <span
+            class="absolute w-40 h-1 mt-16"
+            style="background-color: #1e3e62"
+          ></span>
+          <p class="mt-10">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo
+            repellat neque dignissimos molestiae ducimus corrupti, eum ab velit
+            laudantium commodi in ad architecto hic dicta, voluptatem beatae
+            dolores laboriosam! Alias. Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Necessitatibus voluptas deleniti quo cupiditate
+            unde, atque obcaecati facilis beatae recusandae eligendi repellendus
+            fugiat quae, illo nemo magnam iste rem quis maiores.
+          </p>
+          <div class="w-5/6 self-center my-10">
+            <ol class="list-disc">
+              <li class="my-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Numquam in, ut neque dignissimos illum veritatis perferendis
+                facilis aspernatur unde vitae quae nulla quos ab fugit corrupti
+                sequi id ad quasi.
+              </li>
+              <li class="my-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Numquam in, ut neque dignissimos illum veritatis perferendis
+                facilis aspernatur unde vitae quae nulla quos ab fugit corrupti
+                sequi id ad quasi.
+              </li>
+              <li class="my-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Numquam in, ut neque dignissimos illum veritatis perferendis
+                facilis aspernatur unde vitae quae nulla quos ab fugit corrupti
+                sequi id ad quasi.
+              </li>
+              <li class="my-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Numquam in, ut neque dignissimos illum veritatis perferendis
+                facilis aspernatur unde vitae quae nulla quos ab fugit corrupti
+                sequi id ad quasi.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="ml-40 slider">
+        <div class="section full-height over-hide px-4 px-sm-0 ">
+          <div class="container">
+            <div class="row full-height justify-content-center">
+              <div class="col-lg-10 col-xl-8 align-self-center padding-tb">
+                <div class="section mx-auto text-center slider-height-padding">
+                  <input
+                    class="checkbox frst"
+                    type="radio"
+                    id="slide-1"
+                    name="slider"
+                    checked
+                  />
+                  <label for="slide-1"></label>
+                  <input
+                    class="checkbox scnd"
+                    type="radio"
+                    name="slider"
+                    id="slider-2"
+                  />
+                  <label for="slider-2"></label>
+                  <input
+                    class="checkbox thrd"
+                    type="radio"
+                    name="slider"
+                    id="slider-3"
+                  />
+                  <label for="slider-3"></label>
+                  <input
+                    class="checkbox foth"
+                    type="radio"
+                    name="slider"
+                    id="slider-4"
+                  />
+                  <label for="slider-4"></label>
+                  <ul class="opacity-70">
+                    <li>
+                      <span>MALE GOOFY FACE</span>
+                    </li>
+                    <li>
+                      <span>TOY PIG</span>
+                    </li>
+                    <li>
+                      <span>SHY PORTRAIT</span>
+                    </li>
+                    <li>
+                      <span>SKATEBOARD FACE</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
