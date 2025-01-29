@@ -16,7 +16,7 @@
   </head>
   <body>
     <div
-      class="left flex flex-wrap fixed left-0 top-0 h-screen bg-black text-white justify-evenly w-40 px-6 py-6 items-start"
+      class="lg:left lg:flex lg:flex-wrap lg:fixed lg:left-0 lg:top-0 h-screen lg:bg-black lg:text-white lg:justify-evenly lg:w-40 lg:py-6 lg:px-6 lg:items-start hidden"
     >
       <div>
         <a href="/html-boilerplate.html"
@@ -36,18 +36,23 @@
     </div>
     <div class="right w-full" id="head">
       <div
-        class="relative tracking-wider flex flex-col items-center justify-center text-white ml-40 w-auto bg-slate-400 h-[55rem]"
+        class="relative tracking-wider flex flex-col items-center justify-center text-white lg:ml-40 w-auto bg-slate-400 h-[55rem]"
         style="
           background-image: url(bg-img.jpg);
           background-attachment: fixed;
           background-size: cover;
         "
       >
-        <h3 class="text-7xl"><span class="text-black">H</span>i, I am</h3>
-        <h2 class="text-9xl"><span class="text-black">Divy</span>am Singh</h2>
+        <h3 class="text-7xl">
+          <span class="text-black">H</span><span>i, I am</span>
+        </h3>
+        <h2 class="text-9xl">
+          <span class="text-black">Divy</span
+          ><span class="lg:text-white text-black">am Singh</span>
+        </h2>
         <p class="text-2xl m-8">
-          <span class="text-black">Freelan</span>ce front-end web developer from
-          India.
+          <span class="text-black">Freelan</span
+          ><span>ce front-end web developer from India.</span>
         </p>
         <a href="#about-me"
           ><button
@@ -59,7 +64,7 @@
         >
       </div>
       <div
-        class="ml-40 relative -top-32 flex items-center justify-center w-auto"
+        class="lg:ml-40 relative -top-32 flex items-center justify-center w-auto"
         id="about-me"
       >
         <div class="w-5/6 bg-white p-10 drop-shadow-2xl">
@@ -95,7 +100,7 @@
           </p>
         </div>
       </div>
-      <div class="ml-40 relative -mt-28" id="education">
+      <div class="lg:ml-40 relative -mt-28" id="education">
         <h1 class="text-5xl pt-20 tracking-wider px-[9.5rem]">Education</h1>
         <span
           class="absolute w-40 h-1 mt-4 mx-[9.5rem]"
@@ -137,7 +142,7 @@
         </div>
       </div>
       <div
-        class="ml-40 flex my-16 items-center justify-around p-20 text-center"
+        class="lg:ml-40 flex my-16 items-center justify-around p-20 text-center"
         id="project-counter"
       >
         <div>
@@ -149,7 +154,7 @@
           <h3 class="text-4xl font-light">Projects</h3>
         </div>
       </div>
-      <div class="ml-40 bg-black" id="experiences">
+      <div class="lg:ml-40 bg-black" id="experiences">
         <h1 class="text-5xl tracking-wider px-[9.5rem] text-white pt-24">
           Experiences
         </h1>
@@ -193,7 +198,7 @@
           </ol>
         </div>
       </div>
-      <div class="ml-40 flex items-center justify-center my-10" id="video-sec">
+      <div class="ml-40 lg:flex items-center justify-center my-10 hidden " id="video-sec">
         <div
           class="absolute bg-black text-white w-3/4 h-1/2 opacity-70 text-center p-52 text-6xl tracking-widest rounded-full"
         >
@@ -207,7 +212,7 @@
           loop
         ></video>
       </div>
-      <div class="ml-40 flex items-center justify-center mt-20" id="skills">
+      <div class="lg:ml-40 flex items-center justify-center mt-20" id="skills">
         <div class="w-5/6 p-10 pt-20">
           <h1 class="text-5xl tracking-wider">Skills</h1>
           <span
@@ -266,7 +271,7 @@
           </div>
         </div>
       </div>
-      <div class="ml-40 flex items-center justify-center" id="interests">
+      <div class="lg:ml-40 flex items-center justify-center" id="interests">
         <div class="w-5/6 p-10 flex flex-col">
           <h1 class="text-5xl tracking-wider">Interests & Hobbies</h1>
           <span
@@ -312,7 +317,7 @@
           </div>
         </div>
       </div>
-      <div class="ml-40 slider">
+      <div class="ml-40 slider hidden lg:visible">
         <div class="section full-height over-hide px-4 px-sm-0">
           <div class="container">
             <div class="row full-height justify-content-center">
@@ -367,7 +372,7 @@
           </div>
         </div>
       </div>
-      <div class="ml-40">
+      <div class="lg: ml-40">
         <footer class="site-footer">
           <div class="footer-content">
             <div class="logo-column">
@@ -446,17 +451,13 @@
               <ol>
                 <li><a href="#head">Home</a></li>
                 <li>
-                  <a href=""
-                    >Blog</a
-                  >
+                  <a href="">Blog</a>
                 </li>
                 <li>
                   <a href="">Contact</a>
                 </li>
                 <li>
-                  <a href=""
-                    >Privacy</a
-                  >
+                  <a href="">Privacy</a>
                 </li>
               </ol>
             </nav>

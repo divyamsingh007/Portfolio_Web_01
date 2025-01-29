@@ -247,6 +247,8 @@ ul li:nth-child(4) {
   border-left: solid 5px white;
   border-right: solid 5px white;
   border-bottom: solid 5px white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .footer-content {
