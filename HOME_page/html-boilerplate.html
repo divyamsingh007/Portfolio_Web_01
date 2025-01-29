@@ -2,6 +2,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -14,9 +20,9 @@
     <link rel="stylesheet" href="css-boilerplate.css" />
     <title>Portfolio - Home</title>
   </head>
-  <body>
+  <body class="w-screen overflow-x-hidden">
     <div
-      class="lg:left lg:flex lg:flex-wrap lg:fixed lg:left-0 lg:top-0 h-screen lg:bg-black lg:text-white lg:justify-evenly lg:w-40 lg:py-6 lg:px-6 lg:items-start hidden"
+      class="z-10 lg:left lg:flex lg:flex-wrap lg:fixed lg:left-0 lg:top-0 h-screen lg:bg-black lg:text-white lg:justify-evenly lg:w-40 lg:py-6 lg:px-6 lg:items-start hidden"
     >
       <div>
         <a href="/html-boilerplate.html"
@@ -34,46 +40,61 @@
         <a href="#interests">Interests & Hobbies</a>
       </div>
     </div>
-    <div class="right w-full" id="head">
+    <div class="right w-screen" id="head">
       <div
         class="relative tracking-wider flex flex-col items-center justify-center text-white lg:ml-40 w-auto bg-slate-400 h-[55rem]"
         style="
-          background-image: url(bg-img.jpg);
+          background-image: url(bg-img-2.jpg);
           background-attachment: fixed;
           background-size: cover;
         "
       >
-        <h3 class="text-7xl">
-          <span class="text-black">H</span><span>i, I am</span>
+        <h3 class="text-7xl italic px-10" style="color: whitesmoke">
+          Hi, I am
         </h3>
-        <h2 class="text-9xl">
-          <span class="text-black">Divy</span
-          ><span class="lg:text-white text-black">am Singh</span>
+        <h2
+          class="text-9xl tracking-wider"
+          style="
+            font-family: 'Dancing Script', serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            color: whitesmoke;
+          "
+        >
+          Divyam Singh
         </h2>
-        <p class="text-2xl m-8">
-          <span class="text-black">Freelan</span
-          ><span>ce front-end web developer from India.</span>
+        <p
+          class="text-2xl m-8 italic px-10 font-light"
+          style="color: whitesmoke"
+        >
+          Freelance Front-End Web Developer from India.
         </p>
         <a href="#about-me"
-          ><button
-            class="px-10 py-4 m-10 rounded-full text-xl font-light hover:-translate-y-1 shadow-md"
-            style="background-color: #09122c"
           >
-            Know more⬇️
-          </button></a
-        >
+
+          <div class="contentBox" id="know-more-btn">
+            <div id="first" class="buttonBox">
+              <button>Know more</button>
+              <div class="border"></div>
+              <div class="border"></div>
+            </div></div
+        ></a>
       </div>
       <div
         class="lg:ml-40 relative -top-32 flex items-center justify-center w-auto"
         id="about-me"
       >
         <div class="w-5/6 bg-white p-10 drop-shadow-2xl">
-          <h1 class="text-5xl pt-20 tracking-wider">About Me</h1>
+          <h1
+            class="md:text-5xl md:pt-20 tracking-wider text-3xl pt-15 md:text-left text-center"
+          >
+            About Me
+          </h1>
           <span
-            class="absolute w-40 h-1 mt-4"
+            class="absolute md:w-40 h-1 mt-4 w-0"
             style="background-color: #1e3e62"
           ></span>
-          <p class="mt-10 text-lg font-light">
+          <p class="mt-10 md:text-lg font-light text-base">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae
             repudiandae veniam, dicta aspernatur reiciendis magni. Quae voluptas
             doloribus asperiores impedit eligendi, eum ad! Similique error nobis
@@ -101,16 +122,24 @@
         </div>
       </div>
       <div class="lg:ml-40 relative -mt-28" id="education">
-        <h1 class="text-5xl pt-20 tracking-wider px-[9.5rem]">Education</h1>
+        <h1
+          class="md:text-5xl pt-20 tracking-wider px-[9.5rem] text-3xl w-screen md:text-left text-center"
+        >
+          Education
+        </h1>
         <span
-          class="absolute w-40 h-1 mt-4 mx-[9.5rem]"
+          class="absolute md:w-40 h-1 mt-4 mx-[9.5rem] w-0"
           style="background-color: #1e3e62"
         ></span>
-        <div class="my-10 p-5 flex items-center justify-evenly w-full bg-black">
+        <div
+          class="my-10 p-5 lg:flex items-center justify-evenly w-full bg-black"
+        >
           <div class="card m-10 py-10 px-5 rounded-lg">
-            <h2 class="text-3xl font-semibold my-2">Matriculation</h2>
+            <h2 class="md:text-3xl font-semibold my-2 text-2xl">
+              Matriculation
+            </h2>
             <hr />
-            <p class="mt-10 font-light text-lg">
+            <p class="mt-10 font-light md:text-lg text-base">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
               ipsum provident doloremque sint rem aliquam, officiis error ea sed
               id dicta asperiores, delectus molestiae fugit quis consequuntur,
@@ -118,11 +147,11 @@
             </p>
           </div>
           <div class="card m-10 py-10 px-5 rounded-lg">
-            <h2 class="text-3xl font-semibold my-2">
+            <h2 class="md:text-3xl font-semibold my-2 text-2xl">
               Senior Secondary Education
             </h2>
             <hr />
-            <p class="mt-10 font-light text-lg">
+            <p class="mt-10 font-light md:text-lg text-base">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Inventore commodi nulla, placeat illo at autem explicabo
               perferendis vero sint tempore sed recusandae eum laboriosam
@@ -130,9 +159,9 @@
             </p>
           </div>
           <div class="card m-10 py-10 px-5 rounded-lg">
-            <h2 class="text-3xl font-semibold my-2">Graduation</h2>
+            <h2 class="md:text-3xl font-semibold my-2 text-2xl">Graduation</h2>
             <hr />
-            <p class="mt-10 font-light text-lg">
+            <p class="mt-10 font-light md:text-lg text-base">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga
               esse explicabo eius officia porro deserunt, libero omnis velit et
               veritatis incidunt accusantium optio voluptates! Enim ea earum
@@ -142,27 +171,31 @@
         </div>
       </div>
       <div
-        class="lg:ml-40 flex my-16 items-center justify-around p-20 text-center"
+        class="lg:ml-40 md:flex my-10 items-center justify-around p-10 text-center"
         id="project-counter"
       >
-        <div>
-          <h1 class="text-9xl my-10 tracking-wider">3.2K</h1>
-          <h3 class="text-4xl font-light">Hours Dedicated</h3>
+        <div class="m-5">
+          <h1 class="md:text-9xl my-10 tracking-wider text-7xl">3.2K</h1>
+          <h3 class="md:text-4xl font-light text-3xl">Hours Dedicated</h3>
         </div>
-        <div>
-          <h1 class="text-9xl my-10">217</h1>
-          <h3 class="text-4xl font-light">Projects</h3>
+        <div class="m-5">
+          <h1 class="md:text-9xl my-10 text-7xl">217</h1>
+          <h3 class="md:text-4xl font-light text-3xl">Projects</h3>
         </div>
       </div>
       <div class="lg:ml-40 bg-black" id="experiences">
-        <h1 class="text-5xl tracking-wider px-[9.5rem] text-white pt-24">
+        <h1
+          class="md:text-5xl text-3xl tracking-wider px-[9.5rem] text-white pt-24 md:text-left text-center"
+        >
           Experiences
         </h1>
         <span
-          class="absolute w-40 h-1 mt-4 mx-[9.5rem]"
+          class="absolute md:w-40 h-1 mt-4 mx-[9.5rem] w-0"
           style="background-color: #1e3e62"
         ></span>
-        <p class="mt-10 px-36 text-lg font-light text-white">
+        <p
+          class="mt-10 px-36 md:text-lg text-base font-light text-white md:text-left text-center"
+        >
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum ipsa
           ducimus provident tempore eligendi aliquid vero, autem obcaecati nihil
           mollitia. Dolorum voluptates quod tempore voluptate aut minima odio
@@ -171,7 +204,7 @@
           reiciendis sapiente cum minima magnam, ipsam explicabo ducimus
           corporis inventore veritatis sequi repellat.
         </p>
-        <div class="mx-36 py-10 text-white text-lg">
+        <div class="mx-36 py-10 text-white md:text-lg text-base">
           <ol class="my-5">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda
             iste consequuntur harum minima expedita saepe placeat exercitationem
@@ -198,28 +231,38 @@
           </ol>
         </div>
       </div>
-      <div class="ml-40 lg:flex items-center justify-center my-10 hidden " id="video-sec">
+      <div
+        class="ml-40 lg:flex items-center justify-center my-10 hidden mt-28"
+        id="video-sec"
+      >
         <div
-          class="absolute bg-black text-white w-3/4 h-1/2 opacity-70 text-center p-52 text-6xl tracking-widest rounded-full"
+          class="absolute bg-black text-white w-3/4 h-1/2 opacity-70 text-center px-40 pt-20 text-6xl tracking-widest rounded-full"
         >
           "Imagination is more important than knowledge."
         </div>
         <video
           src="portfolio-vid.mp4"
-          class="w-1/2 object-fill rounded-md"
+          class="w-2/3 object-fill rounded-full"
           autoplay
           muted
           loop
         ></video>
       </div>
-      <div class="lg:ml-40 flex items-center justify-center mt-20" id="skills">
+      <div
+        class="lg:ml-40 flex items-center justify-center mt-20 m-5"
+        id="skills"
+      >
         <div class="w-5/6 p-10 pt-20">
-          <h1 class="text-5xl tracking-wider">Skills</h1>
+          <h1
+            class="md:text-5xl text-3xl tracking-wider md:text-left text-center"
+          >
+            Skills
+          </h1>
           <span
-            class="absolute w-40 h-1 mt-4"
+            class="absolute md:w-40 h-1 mt-4 w-0"
             style="background-color: #1e3e62"
           ></span>
-          <div class="mt-10">
+          <div class="mt-10 md:text-lg text-base font-light">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. A,
             corporis voluptate? Laborum dolore eos vitae rem eligendi, eveniet
             incidunt voluptatem provident consequatur, aliquid quas eaque,
@@ -227,15 +270,17 @@
             consectetur adipisicing elit. Alias doloribus, quas repudiandae
             quibusdam eum quod magni dolorem nam provident repellat? Laudantium
             ea corrupti quaerat ex, nulla totam voluptatum magnam eveniet!
-            <div class="my-10 flex p-10 space-x-5 text-center">
+            <div
+              class="my-10 lg:flex p-10 space-x-5 text-center justify-center"
+            >
               <div
                 class="box flex flex-col my-10 rounded-lg drop-shadow-2xl border-4 border-solid px-5 transition transform hover:-translate-y-5 motion-reduce:transition-none motion-reduce:hover:transform-none"
               >
                 <img src="html-logo.svg" alt="" class="w-24 mx-auto my-10" />
-                <h2 class="text-4xl font-semibold">
+                <h2 class="md:text-4xl font-semibold text-3xl">
                   Hypertext Markup Language
                 </h2>
-                <p class="p-10 font-light text-xl">
+                <p class="p-10 font-light md:text-xl text-lg">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Optio quia cumque dicta blanditiis, aut suscipit quod? Natus
                   maxime nemo aliquam!
@@ -245,8 +290,10 @@
                 class="box flex flex-col my-10 rounded-lg drop-shadow-2xl border-4 border-solid px-5 transition transform hover:-translate-y-5 motion-reduce:transition-none motion-reduce:hover:transform-none"
               >
                 <img src="css-logo.svg" alt="" class="w-24 mx-auto my-10" />
-                <h2 class="text-4xl font-semibold">Cascading Style Sheet</h2>
-                <p class="p-10 font-light text-xl">
+                <h2 class="md:text-4xl text-3xl font-semibold">
+                  Cascading Style Sheet
+                </h2>
+                <p class="p-10 font-light md:text-xl text-lg">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Optio quia cumque dicta blanditiis, aut suscipit quod? Natus
                   maxime nemo aliquam!
@@ -260,8 +307,8 @@
                   alt=""
                   class="w-24 mx-auto my-10"
                 />
-                <h2 class="text-4xl font-semibold">JavaScript</h2>
-                <p class="p-10 font-light text-xl">
+                <h2 class="md:text-4xl text-3xl font-semibold">JavaScript</h2>
+                <p class="p-10 font-light md:text-xl text-lg">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Optio quia cumque dicta blanditiis, aut suscipit quod? Natus
                   maxime nemo aliquam!
@@ -273,12 +320,16 @@
       </div>
       <div class="lg:ml-40 flex items-center justify-center" id="interests">
         <div class="w-5/6 p-10 flex flex-col">
-          <h1 class="text-5xl tracking-wider">Interests & Hobbies</h1>
+          <h1
+            class="md:text-5xl tracking-wider text-3xl md:text-left text-center"
+          >
+            Interests & Hobbies
+          </h1>
           <span
-            class="absolute w-40 h-1 mt-16"
+            class="absolute md:w-40 h-1 mt-16 w-0"
             style="background-color: #1e3e62"
           ></span>
-          <p class="mt-10">
+          <p class="mt-10 md:text-left text-center">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo
             repellat neque dignissimos molestiae ducimus corrupti, eum ab velit
             laudantium commodi in ad architecto hic dicta, voluptatem beatae
@@ -372,7 +423,7 @@
           </div>
         </div>
       </div>
-      <div class="lg: ml-40">
+      <div class="lg:ml-40">
         <footer class="site-footer">
           <div class="footer-content">
             <div class="logo-column">
@@ -438,7 +489,7 @@
               </svg>
             </div>
 
-            <div class="footer-info second-column">
+            <div class="footer-info second-column mx-6">
               <h2 class="footer-business-name">Divyam's Creations</h2>
               <p class="footer-business-address">
                 NIT Hamirpur<br />

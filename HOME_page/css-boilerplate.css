@@ -326,3 +326,96 @@ ul li:nth-child(4) {
     justify-content: center;
   }
 }
+
+#know-more-btn .contentBox {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#know-more-btn .buttonBox {
+  margin: 0 20px 40px;
+  position: relative;
+  max-width: 200px;
+  min-width: 150px;
+  flex: 20%;
+  padding: 6px;
+}
+
+#know-more-btn button {
+  width: 100%;
+  height: 60px;
+
+  position: relative;
+  background: #ffffff;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: none;
+  font-size: 15px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  cursor: pointer;
+}
+
+/* FIRST BUTTON */
+
+.border {
+  position: absolute;
+  background: none;
+  transition: all 0.8s ease-in-out;
+}
+
+#first > .border:nth-of-type(1) {
+  top: 0;
+  left: 0;
+  border-left: 1px solid transparent;
+  border-top: 1px solid transparent;
+  width: 0px;
+  height: 0px;
+}
+
+#first > .border:nth-of-type(2) {
+  bottom: 0;
+  right: 0;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  width: 0px;
+  height: 0px;
+}
+
+#first:hover .border:nth-of-type(1) {
+  width: 106%;
+  height: 115%;
+  border-left: 1px solid #89c341;
+  border-top: 1px solid #89c341;
+}
+
+#first:hover .border:nth-of-type(2) {
+  width: 106%;
+  height: 115%;
+  border-right: 1px solid #89c341;
+  border-bottom: 1px solid #89c341;
+}
+
+/* .buttonBox::after {
+  content: "";
+  position: absolute;
+  font-size: 0;
+  padding: 0;
+  left: 100%;
+  margin-left: -1px;
+  color: #89c341;
+  opacity: 0;
+  top: -30px;
+  transition: all 0.6s ease-in-out;
+  pointer-events: none;
+} */
+
+/* .buttonBox:hover::after {
+  border: 1px solid #89c341;
+  padding: 5px 20px;
+  font-size: 16px;
+  opacity: 1;
+} */
