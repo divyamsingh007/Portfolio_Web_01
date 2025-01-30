@@ -22,11 +22,11 @@ body {
 }
 
 @keyframes appear-02 {
-  from{
+  from {
     opacity: 0;
     transform: translateY(200px);
   }
-  to{
+  to {
     opacity: 1;
     transform: translateY(0);
   }
@@ -43,6 +43,12 @@ body {
   animation: appear-02 linear;
   animation-timeline: view();
   animation-range: entry 0;
+}
+
+.box {
+  animation: appear-02 linear;
+  animation-timeline: view();
+  animation-range:entry 0 cover 20%;
 }
 
 a {
@@ -434,23 +440,36 @@ ul li:nth-child(4) {
   opacity: 1;
 } */
 
-
 @keyframes appear-01 {
-  from{
+  from {
     opacity: 0;
     transform: translateX(600px);
     /* clip-path: inset(100% 100% 0 0); */
   }
-  to{
+  to {
     opacity: 1;
     transform: translateX(0px);
     /* clip-path: inset(0 0 0 0); */
-
   }
 }
 
 #about-me {
   animation: appear-01 linear;
   animation-timeline: view();
-  animation-range: entry 0% ;
+  animation-range: entry 0%;
+}
+
+@keyframes appear-03 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.experiences-text {
+  animation: appear-03 linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
