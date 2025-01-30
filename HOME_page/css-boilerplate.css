@@ -21,6 +21,17 @@ body {
   opacity: 0.7;
 }
 
+@keyframes appear-02 {
+  from{
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .card {
   /* From https://css.glass */
   background: rgb(255, 255, 255);
@@ -29,6 +40,9 @@ body {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: appear-02 linear;
+  animation-timeline: view();
+  animation-range: entry 0;
 }
 
 a {
@@ -364,7 +378,7 @@ ul li:nth-child(4) {
 .border {
   position: absolute;
   background: none;
-  transition: all 0.8s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 #first > .border:nth-of-type(1) {
@@ -419,3 +433,24 @@ ul li:nth-child(4) {
   font-size: 16px;
   opacity: 1;
 } */
+
+
+@keyframes appear-01 {
+  from{
+    opacity: 0;
+    transform: translateX(600px);
+    /* clip-path: inset(100% 100% 0 0); */
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+    /* clip-path: inset(0 0 0 0); */
+
+  }
+}
+
+#about-me {
+  animation: appear-01 linear;
+  animation-timeline: view();
+  animation-range: entry 0% ;
+}
