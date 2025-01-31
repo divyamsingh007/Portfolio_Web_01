@@ -46,6 +46,7 @@ body {
 }
 
 .box {
+   width: 120rem;
   animation: appear-02 linear;
   animation-timeline: view();
   animation-range: entry 0 cover 20%;
