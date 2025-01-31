@@ -453,7 +453,7 @@ ul li:nth-child(4) {
   }
 }
 
-#about-me {
+#video-sec, #about-me {
   animation: appear-01 linear;
   animation-timeline: view();
   animation-range: entry 0%;
