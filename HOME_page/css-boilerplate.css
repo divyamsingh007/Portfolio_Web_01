@@ -604,3 +604,7 @@ ul li:nth-child(4) {
 .social-media a:hover .fa-linkedin-in {
   color: #3b5998;
 }
+
+.white-underline{
+  border-bottom: solid 1px white;
+}
