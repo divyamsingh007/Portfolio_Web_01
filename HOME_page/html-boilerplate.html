@@ -2,6 +2,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Divyam Singh - Frontend Web Developer specializing in responsive web design and modern JavaScript frameworks"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,9 +23,27 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css-boilerplate.css" />
+
+    <link rel="preload" as="image" href="portfolio-img-2.jpg" />
+    <link rel="preload" as="image" href="bg-img-2.jpg" />
+
+    <picture>
+      <source srcset="bg-img-2.webp" type="image/webp" />
+      <source srcset="bg-img-2.jpg" type="image/jpeg" />
+      <!-- <img src="bg-img-2.jpg" alt="Background image" /> -->
+    </picture>
+
     <title>Portfolio - Home</title>
   </head>
   <body class="w-screen overflow-x-hidden">
+    <div class="loader">
+      <div class="spinner"></div>
+    </div>
+    <div
+      class="scroll-progress fixed top-0 left-0 w-full h-[0.2rem] bg-gray-200 z-50"
+    >
+      <div class="progress-bar h-full bg-black" style="width: 0%"></div>
+    </div>
     <div
       class="z-10 lg:left lg:flex lg:flex-wrap lg:fixed lg:left-0 lg:top-0 h-screen lg:bg-black lg:text-white lg:justify-evenly lg:w-40 lg:py-6 lg:px-6 lg:items-start hidden"
     >
@@ -269,21 +292,7 @@
           </ol> -->
         </div>
       </div>
-      <div class="ml-40 lg:flex items-center justify-center my-10 hidden mt-28">
-        <div
-          class="z-10 absolute bg-black text-white w-3/4 h-1/2 opacity-70 text-center px-40 pt-20 text-6xl tracking-widest rounded-full"
-        >
-          "Imagination is more important than knowledge."
-        </div>
-        <video
-          src="portfolio-vid.mp4"
-          class="w-2/3 object-fill rounded-full"
-          id="video-sec"
-          autoplay
-          muted
-          loop
-        ></video>
-      </div>
+
       <div
         class="lg:ml-40 flex items-center justify-center mt-20 m-5"
         id="skills"
@@ -298,17 +307,21 @@
             class="absolute md:w-40 h-1 mt-4 w-0"
             style="background-color: #1e3e62"
           ></span>
-          <div class="mt-10 md:text-lg text-base font-light experiences-text">
-            I am a passionate Frontend Web Developer with a solid foundation in
-            HTML5, CSS3, and JavaScript (ES6+), along with hands-on experience
-            in building dynamic, responsive websites using React and Next.js.
-            Skilled in utilizing UI frameworks like Tailwind CSS and Bootstrap,
-            I focus on creating clean, user-friendly interfaces and optimizing
-            web performance. I am proficient in Git and GitHub for version
-            control and team collaboration. Beyond technical skills, I am a
-            strong problem-solver with a collaborative mindset and excellent
-            communication abilities, allowing me to effectively work in teams
-            and convey complex technical concepts to non-technical stakeholders.
+          <div class="mt-10 md:text-lg text-base font-light">
+            <p class="experiences-text">
+              I am a passionate Frontend Web Developer with a solid foundation
+              in HTML5, CSS3, and JavaScript (ES6+), along with hands-on
+              experience in building dynamic, responsive websites using React
+              and Next.js. Skilled in utilizing UI frameworks like Tailwind CSS
+              and Bootstrap, I focus on creating clean, user-friendly interfaces
+              and optimizing web performance. I am proficient in Git and GitHub
+              for version control and team collaboration. Beyond technical
+              skills, I am a strong problem-solver with a collaborative mindset
+              and excellent communication abilities, allowing me to effectively
+              work in teams and convey complex technical concepts to
+              non-technical stakeholders.
+            </p>
+
             <div
               class="my-1 lg:flex py-10 space-x-10 text-center justify-between flex-col"
             >
@@ -685,6 +698,45 @@
     >
       <!-- Add your mobile menu content here -->
     </div>
+    <button
+      id="back-to-top"
+      class="fixed bottom-8 right-8 bg-black text-white p-4 rounded-full shadow-lg hidden hover:bg-white hover:text-black transition-colors"
+      aria-label="Back to top"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <script>
+      // back to top arrow
+      const backToTop = document.getElementById("back-to-top");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          backToTop.classList.remove("hidden");
+        } else {
+          backToTop.classList.add("hidden");
+        }
+      });
+      backToTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // scroll percentage bar
+      window.addEventListener("scroll", () => {
+        const winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        const height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.querySelector(".progress-bar").style.width = scrolled + "%";
+      });
+
+      //Pre loader
+      window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader");
+        loader.classList.add("fade-out");
+        setTimeout(() => (loader.style.display = "none"), 500);
+      });
+    </script>
     <script src="js-boilerplate.js"></script>
   </body>
 </html>
