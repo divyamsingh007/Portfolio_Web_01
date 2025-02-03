@@ -26,6 +26,79 @@ body {
   transition: opacity 0.5s ease-out;
 }
 
+.navbar {
+  width: fit-content;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  border-radius: 0 0 0 10px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #ffcc00;
+  transition: width 0.3s ease;
+  transition-delay: 0.1s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+  left: 0;
+  background: #ffcc00;
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .navbar a {
+    font-size: 1rem;
+    display: none;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .navbar a.active {
+    display: block;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}
+
 #nav-list {
   display: flex;
 }
@@ -63,7 +136,7 @@ body {
 }
 
 .box {
-   width: 100%;
+  width: 100%;
   animation: appear-02 linear;
   animation-timeline: view();
   animation-range: entry 0 cover 20%;
@@ -471,7 +544,8 @@ ul li:nth-child(4) {
   }
 }
 
-#video-sec, #about-me {
+#video-sec,
+#about-me {
   animation: appear-01 linear;
   animation-timeline: view();
   animation-range: entry 0%;
@@ -622,6 +696,6 @@ ul li:nth-child(4) {
   color: #3b5998;
 }
 
-.white-underline{
+.white-underline {
   border-bottom: solid 1px white;
 }

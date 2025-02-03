@@ -44,6 +44,28 @@
     >
       <div class="progress-bar h-full bg-black" style="width: 0%"></div>
     </div>
+    <!-- Navbar -->
+    <nav class="navbar mx-10 my-6">
+      <div class="navbar-toggle" id="navbar-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <a href="#home" class="nav-link px-4" aria-label="Navigate to Home"
+        >Home</a
+      >
+      <a href="#contact" class="nav-link px-4" aria-label="Navigate to Contact"
+        >Contact</a
+      >
+    </nav>
+
+    <!-- Example content to demonstrate scrolling -->
+    <!-- <div style="height: 200vh; padding-top: 60px;">
+      <section id="home" style="height: 100vh; background-color: #f0f0f0;">
+          <h1>Home Section</h1>
+      </section>
+      <section id="contact" style="height: 100vh; background-color: #e0e0e0;">
+          <h1>Contact Section</h1>
+      </section>
+  </div> -->
     <div
       class="z-10 lg:left lg:flex lg:flex-wrap lg:fixed lg:left-0 lg:top-0 h-screen lg:bg-black lg:text-white lg:justify-evenly lg:w-40 lg:py-6 lg:px-6 lg:items-start hidden"
     >
@@ -687,11 +709,6 @@
         </footer>
       </div>
     </div>
-    <div class="lg:hidden fixed top-4 right-4 z-20">
-      <button id="mobile-menu-button" aria-label="Toggle menu">
-        <i class="fas fa-bars text-2xl"></i>
-      </button>
-    </div>
     <div
       id="mobile-menu"
       class="fixed inset-0 bg-white bg-opacity-90 z-10 hidden lg:hidden"
@@ -735,6 +752,16 @@
         const loader = document.querySelector(".loader");
         loader.classList.add("fade-out");
         setTimeout(() => (loader.style.display = "none"), 500);
+      });
+
+      // Toggle navbar links on mobile
+      const navbarToggle = document.getElementById("navbar-toggle");
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      navbarToggle.addEventListener("click", () => {
+        navLinks.forEach((link) => {
+          link.classList.toggle("active");
+        });
       });
     </script>
     <script src="js-boilerplate.js"></script>
